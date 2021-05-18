@@ -78,12 +78,12 @@ function generatePassword() {
           i = addUnderCase.length + 1;
         }
       }
-    }
-    if(test1 != true){
-      returnValue = makePassword();
-      console.log("Test1 failed");
-      validate();
-      return;
+      if(test1 != true){
+        returnValue = makePassword();
+        console.log("Test1 failed");
+        validate();
+        return;
+      }
     }
     if (upperCase){
       var test2;
@@ -95,12 +95,12 @@ function generatePassword() {
           i = addUpperCase.length + 1;
         }
       }
-    }
-    if(test2 != true){
-      returnValue = makePassword();
-      console.log("Test2 failed");
-      validate();
-      return;
+      if(test2 != true){
+        returnValue = makePassword();
+        console.log("Test2 failed");
+        validate();
+        return;
+      }
     }
     if(numeric){
       var test3;
@@ -110,14 +110,14 @@ function generatePassword() {
       if(test3 === true){
         console.log("Passed test3");
         i = addNumeric.length + 1;
+        }
       }
+      if(test3 != true){
+        returnValue = makePassword();
+        console.log("Test3 failed");
+        validate();
+        return;
       }
-    } 
-    if(test3 != true){
-      returnValue = makePassword();
-      console.log("Test3 failed");
-      validate();
-      return;
     }
     if (special){
       var test4;
