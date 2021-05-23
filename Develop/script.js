@@ -42,7 +42,7 @@ function generatePassword() {
   //ask to include special characters, if yes add those to charset
   var special = confirm("Would you like to use special characters?");
   if (special){
-    var addSpecial = "!@#$%^&*()";
+    var addSpecial = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
     charSet = charSet.concat(addSpecial);
   }
   //check to make sure that at least one character type has been chosen, otherwise break the procedure
@@ -51,7 +51,7 @@ function generatePassword() {
     return;
   }
 
-  //generates a password from charset given user parameters
+  //generates a password from charset, after being given user parameters
   function makePassword(){
     var retVal = "";
     returnValue = "";
@@ -65,7 +65,7 @@ function generatePassword() {
   returnValue = makePassword();
   validate();
 
-  //validate the generated password to ensure that all selected character types have been used, if not generate a new password by calling makePassword() again.
+  //validate the generated password to ensure that all selected character types have been used, if not generate a new password by calling makePassword() and then validate() again.
   function validate(){
     console.log("validate ran");
     if (underCase){
@@ -110,7 +110,7 @@ function generatePassword() {
       if(test3 === true){
         console.log("Passed test3");
         i = addNumeric.length + 1;
-        }
+      }
       }
       if(test3 != true){
         returnValue = makePassword();
