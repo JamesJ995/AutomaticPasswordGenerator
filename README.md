@@ -6,7 +6,7 @@ Generate a unique password given parameters from the user.
 ------------
 
 Finished product:
-![FinalPage](./develop/finalpage.png)
+![FinalPage](./develop/FinalPage.png)
 
 Link to final page:
 https://jamesj995.github.io/AutomaticPasswordGenerator/
